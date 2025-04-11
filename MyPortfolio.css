@@ -11,7 +11,7 @@ body{
 #background{
     width: 100%;
     height: 100vh;
-    background-image: url(images/back2.webp);
+    background-image: url(images/background1.jpg);
     background-size: cover;
     background-position: inherit;
 }
@@ -21,7 +21,7 @@ body{
     font-weight: 700;
 }
 .container{
-    margin: 10px 5%;
+    margin: 10px 3%;
 }
 nav{
     display: flex;
@@ -200,6 +200,67 @@ nav ul li a:hover::after{
     color: white;
     background-color: rgb(225, 66, 66)
 }
+/*-------------projects------*/
+#portfolio{
+    padding: 50px 0;
+}
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: rgb(197, 236, 239);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+
 
 .contact-left{
     flex-basis: 35%;
